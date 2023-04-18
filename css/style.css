@@ -1,0 +1,81 @@
+:root {
+  --verde: #137547;
+  --text: #fff;
+  --text-dark: #03301a;
+  --primary: #054a29;
+  --primary-hover: #5bba6f;
+  --btn-bg-color: #054a29;
+  --btn-bg-color-hover: #03301a;
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+  --btn-border-color: #054a29;
+  --btn-border-color-hover: #03301a;
+}
+
+body {
+  background-color: var(--verde);
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.zapform {
+  max-width: 500px;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.125rem var(--primary);
+}
+
+.btn {
+  font-weight: 700;
+  border-width: 2px;
+}
+
+.btn-primary {
+  background-color: var(--btn-bg-color);
+  border-color: var(--btn-border-color);
+  color: var(--btn-color);
+}
+
+.btn-primary:hover,
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: var(--btn-bg-color-hover);
+  border-color: var(--btn-border-color-hover);
+  color: var(--btn-color-hover);
+}
+
+.copyright,
+.copyright a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: var(--btn-bg-color) !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+  background-image: none !important;
+  background-color: var(--btn-bg-color-hover) !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: none !important;
+}
