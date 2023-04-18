@@ -8,7 +8,7 @@ function generateLink(e) {
   const countryCode = +document.zapform.getAttribute('data-country-code');
   const phoneNumber = +document.zapform.getAttribute('data-phone-number');
   const url = 'https://wa.me/';
-  const finalUrl = `${url}${+countryCode}${+phoneNumber}?text=Você tem uma nova mensagem!%0a%0a*Nome:* ${name}%0a*E-mail:* ${email}%0a*Assunto:* ${subject}%0a%0a*Mensagem:* ${message}`;
+  const finalUrl = `${url}${countryCode}${phoneNumber}?text=Você tem uma nova mensagem!%0a%0a*Nome:* ${name}%0a*E-mail:* ${email}%0a*Assunto:* ${subject}%0a%0a*Mensagem:* ${message}`;
 
   if (isNaN(countryCode) || isNaN(phoneNumber)) {
     Swal.fire('Falha ao enviar', 'O número de telefone para o envio não foi cadastrado ou está incorreto.', 'error');
